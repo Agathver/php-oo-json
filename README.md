@@ -54,7 +54,7 @@ $object = new User("John Doe", 123456);
 $json = JSON::stringify($object);
 
 echo $json;     // {"name":"John Doe","number":"12345"}
-
+````
 ## LICENSE
 
 Copyright (c) 2016, Amitosh Swain Mahapatra
