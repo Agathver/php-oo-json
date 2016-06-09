@@ -6,12 +6,18 @@ and converting values to JSON. It can't be constructed and contains
 no properties or constants of its own. Aside from its two method properties
 it has no interesting functionality of its own.
 
-The `Json::parse` and `Json::stringify` methods are mere OO wrappers around
+The `JSON::parse` and `JSON::stringify` methods are mere OO wrappers around
 `json_decode` and `json_encode` PHP functions.
 
 See http://php.net/manual/en/book.json.php
 
 ## Usage
+
+### Installation
+
+````bash
+$ composer require originalasm/php-oo-json
+````
 
 ### Simple JSON parsing
 ````php
