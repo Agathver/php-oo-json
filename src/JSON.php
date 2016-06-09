@@ -26,17 +26,16 @@ namespace OOJson;
  * The Json::parse and Json::stringify methods are mere OO wrappers around native
  * PHP json implementations.
  *
- * @see     http://php.net/manual/en/book.json.php
+ * @see       http://php.net/manual/en/book.json.php
  * </p>
- * @package OOJson
+ * @package   OOJson
  * @copyright 2016 Amitosh Swain Mahapatra
- * @license ISC
- *
+ * @license   ISC
  */
 class JSON
 {
     /**
-     * The Jsn class cannot be instantiated.
+     * The JSON class cannot be instantiated.
      */
     private function __construct()
     {
@@ -114,7 +113,8 @@ class JSON
         if ($error != JSON_ERROR_NONE)
             throw new JsonException(json_last_error_msg(), $error);
         else
-            return $error;
+            return $json;
     }
-
 }
+
+

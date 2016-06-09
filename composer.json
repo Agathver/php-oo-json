@@ -1,13 +1,18 @@
 {
-    "name": "originalasm/php-oo-json",
-    "description": "An Object Oriented interface for the PHP JSON parser",
-    "license": "BSD-2-Clause",
-    "authors": [
-        {
-            "name": "Amitosh Swain Mahapatra",
-            "email": "amitosh.swain@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+  "name": "originalasm/php-oo-json",
+  "description": "An Object Oriented wrapper for the PHP JSON parser",
+  "license": "ISC",
+  "authors": [
+    {
+      "name": "Amitosh Swain Mahapatra",
+      "email": "amitosh.swain@protonmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "OOJson\\": "src/"
+    }
+  }
 }
