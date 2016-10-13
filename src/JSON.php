@@ -64,14 +64,14 @@ class JSON
      * @throws JsonException when the string cannot be decoded successfully
      * </p>
      */
-    static function parse($json, $parseAsArray = false, $depth = 512, $options = 0)
+    public static function parse($json, $parseAsArray = false, $depth = 512, $options = 0)
     {
         $ret = json_decode($json, $parseAsArray, $depth, $options);
 
         $error = json_last_error();
 
         if ($error != JSON_ERROR_NONE)
-            throw new JsonException(json_last_error_msg(), $error);
+            throw new JSONException(json_last_error_msg(), $error);
         else return $ret;
     }
 
@@ -104,17 +104,15 @@ class JSON
      * @throws JsonException when $object cannot be converted into JSON
      *
      */
-    static function stringify($object, $options = 0, $depth = 512)
+    public static function stringify($object, $options = 0, $depth = 512)
     {
         $json = json_encode($object, $options, $depth);
 
         $error = json_last_error();
 
         if ($error != JSON_ERROR_NONE)
-            throw new JsonException(json_last_error_msg(), $error);
+            throw new JSONException(json_last_error_msg(), $error);
         else
             return $json;
     }
 }
-
-
